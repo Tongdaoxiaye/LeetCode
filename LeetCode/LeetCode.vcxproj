@@ -127,7 +127,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="mergeTwoLists.cpp" />
     <ClCompile Include="OutQueue.cpp" />
+    <ClCompile Include="ReviewLinkList.cpp" />
     <ClCompile Include="SqList.cpp" />
     <ClCompile Include="ValidBracket.cpp" />
   </ItemGroup>
