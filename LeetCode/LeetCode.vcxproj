@@ -127,10 +127,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Expression.cpp" />
     <ClCompile Include="mergeTwoLists.cpp" />
     <ClCompile Include="OutQueue.cpp" />
+    <ClCompile Include="SqQueueReview.cpp" />
     <ClCompile Include="ReviewLinkList.cpp" />
     <ClCompile Include="SqList.cpp" />
+    <ClCompile Include="ValidBracketTest.cpp" />
     <ClCompile Include="ValidBracket.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

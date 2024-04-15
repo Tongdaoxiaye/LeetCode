@@ -34,17 +34,17 @@ void printList(ListNode* head) {
     cout << endl;
 }
 
-int main() {
-    ListNode* l1 = new ListNode(1);
-    l1->next = new ListNode(3);
-    l1->next->next = new ListNode(5);
-
-    ListNode* l2 = new ListNode(2);
-    l2->next = new ListNode(4);
-    l2->next->next = new ListNode(6);
-
-    ListNode* merged = mergeTwoLists(l1, l2);
-    printList(merged);
-
-    return 0;
-}
+//int main() {
+//    ListNode* l1 = new ListNode(1);
+//    l1->next = new ListNode(3);
+//    l1->next->next = new ListNode(5);
+//
+//    ListNode* l2 = new ListNode(2);
+//    l2->next = new ListNode(4);
+//    l2->next->next = new ListNode(6);
+//
+//    ListNode* merged = mergeTwoLists(l1, l2);
+//    printList(merged);
+//
+//    return 0;
+//}
