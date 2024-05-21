@@ -132,6 +132,7 @@
     <ClCompile Include="mergeTwoLists.cpp" />
     <ClCompile Include="OutQueue.cpp" />
     <ClCompile Include="restart.cpp" />
+    <ClCompile Include="SqQueue.cpp" />
     <ClCompile Include="SqQueueReview.cpp" />
     <ClCompile Include="ReviewLinkList.cpp" />
     <ClCompile Include="SqList.cpp" />

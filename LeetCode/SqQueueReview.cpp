@@ -1,3 +1,4 @@
+/*
 #include<iostream>
 using namespace std;
 #define MAXQSIZE 100
@@ -90,3 +91,5 @@ void PrintQueue(SqQueue Q) {
 //
 //	return 0;
 //}
+
+*/

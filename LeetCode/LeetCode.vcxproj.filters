@@ -11,5 +11,6 @@
     <ClCompile Include="ValidBracket.cpp" />
     <ClCompile Include="restart.cpp" />
     <ClCompile Include="LinkStack.cpp" />
+    <ClCompile Include="SqQueue.cpp" />
   </ItemGroup>
 </Project>
