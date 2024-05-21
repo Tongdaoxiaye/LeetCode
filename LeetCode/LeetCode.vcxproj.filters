@@ -10,5 +10,6 @@
     <ClCompile Include="ValidBracketTest.cpp" />
     <ClCompile Include="ValidBracket.cpp" />
     <ClCompile Include="restart.cpp" />
+    <ClCompile Include="LinkStack.cpp" />
   </ItemGroup>
 </Project>

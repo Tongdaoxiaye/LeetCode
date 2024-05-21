@@ -50,6 +50,7 @@ bool IsEmpty(SqStack S) {
 	if (S.top == S.base) return true;
 	return false;
 }
+/*
 int main() {
 	SqStack S;
 	InitSqStack(S);
@@ -61,3 +62,4 @@ int main() {
 	cout << GetElem(S) << endl;
 	cout << IsEmpty(S);
 }
+*/
