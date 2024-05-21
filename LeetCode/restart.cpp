@@ -7,7 +7,7 @@ using namespace std;
 typedef int Status;
 //顺序栈还是链栈？
 //首先回顾一下顺序栈
-typedef struct{
+typedef struct {
 	int* top;
 	int* base;
 	int stacksize;
@@ -23,14 +23,14 @@ Status InitSqStack(SqStack& S) {
 	return OK;
 }
 //入栈
-Status Push(SqStack &S,int e) {
+Status Push(SqStack& S, int e) {
 	if (S.top - S.base == MAXSIZE) return ERROR;
 	*S.top = e;
 	S.top++;
 	return OK;
 }
 //出栈
-Status Pop(SqStack &S,int e) {
+Status Pop(SqStack& S, int e) {
 	if (S.top == S.base) return ERROR;
 	e = *S.top;
 	S.top--;
@@ -42,8 +42,8 @@ int GetElem(SqStack S) {
 }
 //打印输出
 void PrintSqStack(SqStack S) {
-	while(S.top-S.base!=0)
-	cout << *--S.top << " ";
+	while (S.top - S.base != 0)
+		cout << *--S.top << " ";
 }
 //判断是不是空栈
 bool IsEmpty(SqStack S) {
@@ -58,6 +58,6 @@ int main() {
 	}
 	PrintSqStack(S);
 	cout << endl;
-	cout << GetElem(S)<<endl;
+	cout << GetElem(S) << endl;
 	cout << IsEmpty(S);
 }
