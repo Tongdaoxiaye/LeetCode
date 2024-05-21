@@ -54,6 +54,7 @@ int GetElem(SqQueue S) {
 	return S.base[S.front];
 }
 
+/*
 int main() {
 	SqQueue S;
 	InitSqQueue(S);
@@ -65,3 +66,4 @@ int main() {
 	cout << GetLength(S)<<endl;
 	cout << GetElem(S)<<endl;
 }
+*/

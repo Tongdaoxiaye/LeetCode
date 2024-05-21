@@ -12,5 +12,6 @@
     <ClCompile Include="restart.cpp" />
     <ClCompile Include="LinkStack.cpp" />
     <ClCompile Include="SqQueue.cpp" />
+    <ClCompile Include="LinkQueue.cpp" />
   </ItemGroup>
 </Project>
