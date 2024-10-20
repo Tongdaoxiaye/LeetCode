@@ -1,4 +1,5 @@
 #include <iostream>
+#include <queue>
 using namespace std;
 
 
@@ -34,6 +35,21 @@ void lastOut(TreeNode* n) {
 	}
 }
 
+//层序遍历二叉树
+void levelOut(TreeNode * root) {
+	if (!root) return;
+	queue<TreeNode*> q;
+	q.push(root);
+
+	while (!q.empty()) {
+		TreeNode* node = q.front();//获取队首元素
+		q.pop();
+		cout << node->val << " ";
+		if (node->left) q.push(node->left);
+		if (node->right) q.push(node->right);
+	}
+}
+
 int main() {
 	//初始化节点
 	TreeNode *n1 = new TreeNode(1);
@@ -48,9 +64,13 @@ int main() {
 	n2->left = n4;
 	n2->right = n5;
 
+	//遍历二叉树
 	firstOut(n1);
 	cout << endl;
 	midOut(n1);
 	cout << endl;
 	lastOut(n1);
+	cout << endl;
+	levelOut(n1);
+	return 0;
 }
