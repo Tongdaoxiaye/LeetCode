@@ -50,7 +50,7 @@ void levelOut(TreeNode * root) {
 	}
 }
 
-int main() {
+int main02() {
 	//初始化节点
 	TreeNode *n1 = new TreeNode(1);
 	TreeNode *n2 = new TreeNode(2);

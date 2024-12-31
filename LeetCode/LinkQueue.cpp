@@ -4,7 +4,7 @@ using namespace std;
 //单链表的结构
 typedef struct LinkNode{
 	int val;
-	struct LinkNode* next;
+	LinkNode* next;
 }LinkNode;
 
 //链队列的结构
