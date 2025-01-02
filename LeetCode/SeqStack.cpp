@@ -45,25 +45,25 @@ void PrintSeqStack(SeqStack S) {
 	cout << endl;
 }
 
-//测试类
-int main() {
-	//必要的声明
-	int e;
-	SeqStack S;
-
-	//初始化
-	InitSeqStack(S);
-
-	//入栈
-	for (int i = 0;i < 5;i++) {
-		cin >> e;
-		PushStack(S, e);
-	}
-
-	//出栈
-	PopStack(S, e);
-	cout << "弹出数据：" << e << endl;
-
-	//打印输出
-	PrintSeqStack(S);
-}
+////测试类
+//int main() {
+//	//必要的声明
+//	int e;
+//	SeqStack S;
+//
+//	//初始化
+//	InitSeqStack(S);
+//
+//	//入栈
+//	for (int i = 0;i < 5;i++) {
+//		cin >> e;
+//		PushStack(S, e);
+//	}
+//
+//	//出栈
+//	PopStack(S, e);
+//	cout << "弹出数据：" << e << endl;
+//
+//	//打印输出
+//	PrintSeqStack(S);
+//}
