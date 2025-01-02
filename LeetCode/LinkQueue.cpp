@@ -1,77 +1,90 @@
 #include <iostream>
 using namespace std;
 
-//单链表的结构
-typedef struct LinkNode{
-	int val;
-	LinkNode* next;
-}LinkNode;
+#define MaxSize 100
 
-//链队列的结构
-typedef struct{
-	LinkNode* front;
-	LinkNode* rear;
-	int size;
+//栈队列的结构
+typedef struct QNode {
+	int data;
+	QNode* next;//这里不要写成int*next，这是指向结点这个结构体的结构体指针！
+}QNode, * QueuePtr;
+
+//使用两个指针唯一确定该队列
+typedef struct LinkQueue {
+	QueuePtr front;
+	QueuePtr rear;
 }LinkQueue;
 
 //初始化
-void InitLinkQueue(LinkQueue &q) {
-	q.front = q.rear = nullptr;
-	q.size = 0;
-}
-
-//建立节点
-LinkNode* BuyLinkNode(int e) {
-	LinkNode* p = (LinkNode*)malloc(sizeof(LinkNode));
-	if (p == NULL) return NULL;//malloc 函数在内存分配失败时会返回 NULL。如果没有对返回值 p 进行检查，
-	p->next = NULL; //直接对 p 进行解引用（如 p->next = NULL 或 p->val = e），会导致空指针解引用的错误。
-	p->val = e;
-	return p;
+void InitQueue(LinkQueue &Q){
+	//需要有一个头节点
+	QNode* q = new QNode();
+	q->next = NULL;
+	//指定队头队尾结点指针
+	Q.front = Q.rear = q;
 }
 
 //判空
-bool IsEmpty(LinkQueue q) {
-	return q.size == 0;
+bool isEmpty(LinkQueue Q) {
+	return Q.front->next == NULL;
 }
 
 //入队
-void EnQueue(LinkQueue &q,int e) {
-	LinkNode* p = BuyLinkNode(e);
-	if (IsEmpty(q)) q.rear = q.front = p;
-	else {
-		q.rear->next = p;
-		q.rear = p;
-	}
-	q.size++;
+void EnQueue(LinkQueue& Q, int e) {
+	//创建新的队列结点
+	QNode* p = new QNode();
+	p->data = e;
+	p->next = NULL;
+	//加入到队尾并更新队尾指针
+	Q.rear->next = p;
+	Q.rear = p;
 }
 
 //出队
-int DeQueue(LinkQueue& q) {
-	if (IsEmpty(q)) return -1;
-	LinkNode* temp = q.front;
-	int e = temp->val;
-	q.front = q.front->next;
-	free(temp);
-	q.size--;
-	return e;
+bool OutQueue(LinkQueue &Q, int &e) {
+	if (isEmpty(Q)) return false;
+	QNode* p = Q.front ->next;//保存头节点的下一个结点,即第一个数据节点
+	e = p->data;
+	Q.front->next = p->next;
+	free(p);
+	return true;
 }
 
-
-//遍历队列
-void PrintQueue(LinkQueue q) {
-	int e=0;
-	while (!IsEmpty(q)) {
-		cout<<DeQueue(q)<<" ";
+//打印输出
+void PrintQueue(LinkQueue Q) {
+	QueuePtr p = Q.front->next;
+	while (p!= Q.rear) {
+		cout << p->data << " ";
+		p = p->next;
 	}
+	cout << p->data << endl;
 }
 
-int main03() {
-	LinkQueue q;
-	InitLinkQueue(q);
-	for (int i = 1;i <= 5;i++) {
-		LinkNode* p = BuyLinkNode(i);
-		EnQueue(q,p->val);
+//测试类
+int main() {
+	//必要的声明
+	int e;
+	LinkQueue Q;
+
+	//初始化
+	InitQueue(Q);
+
+	//入队
+	for (int i = 0;i < 5;i++) {
+		cin >> e;
+		EnQueue(Q, e);
 	}
-	PrintQueue(q);
+
+	//出队
+	OutQueue(Q, e);
+	cout << "出队了一个数据：" << e << endl;
+
+	//再入队一个元素
+	int x = 6;
+	EnQueue(Q, x);
+
+	//打印输出
+	PrintQueue(Q);
+
 	return 0;
 }
