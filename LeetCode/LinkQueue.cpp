@@ -61,30 +61,30 @@ void PrintQueue(LinkQueue Q) {
 }
 
 //测试类
-int main() {
-	//必要的声明
-	int e;
-	LinkQueue Q;
-
-	//初始化
-	InitQueue(Q);
-
-	//入队
-	for (int i = 0;i < 5;i++) {
-		cin >> e;
-		EnQueue(Q, e);
-	}
-
-	//出队
-	OutQueue(Q, e);
-	cout << "出队了一个数据：" << e << endl;
-
-	//再入队一个元素
-	int x = 6;
-	EnQueue(Q, x);
-
-	//打印输出
-	PrintQueue(Q);
-
-	return 0;
-}
+//int main() {
+//	//必要的声明
+//	int e;
+//	LinkQueue Q;
+//
+//	//初始化
+//	InitQueue(Q);
+//
+//	//入队
+//	for (int i = 0;i < 5;i++) {
+//		cin >> e;
+//		EnQueue(Q, e);
+//	}
+//
+//	//出队
+//	OutQueue(Q, e);
+//	cout << "出队了一个数据：" << e << endl;
+//
+//	//再入队一个元素
+//	int x = 6;
+//	EnQueue(Q, x);
+//
+//	//打印输出
+//	PrintQueue(Q);
+//
+//	return 0;
+//}

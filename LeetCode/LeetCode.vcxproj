@@ -132,6 +132,7 @@
     <ClCompile Include="levelOrder.cpp" />
     <ClCompile Include="LinkQueue.cpp" />
     <ClCompile Include="LinkStack.cpp" />
+    <ClCompile Include="SeqList.cpp" />
     <ClCompile Include="SeqQueue.cpp" />
     <ClCompile Include="SeqStack.cpp" />
     <ClCompile Include="validBracket.cpp" />
