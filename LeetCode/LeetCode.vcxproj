@@ -132,6 +132,8 @@
     <ClCompile Include="levelOrder.cpp" />
     <ClCompile Include="LinkQueue.cpp" />
     <ClCompile Include="LinkStack.cpp" />
+    <ClCompile Include="SeqStack.cpp" />
+    <ClCompile Include="validBracket.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

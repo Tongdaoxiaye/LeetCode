@@ -57,31 +57,31 @@ void PrintLinkStack(LinkStack L) {
 	cout << endl;
 }
 
-//测试
-int main() {
-	//声明链栈
-	LinkStack L;
-	//声明待存入的数据
-	int e;
-
-	//初始化
-	InitLinkStack(L);
-
-	//输入数据
-	cout << "请输入5个数据：";
-	for (int i = 0;i < 5;i++) {
-		cin >> e;
-		PushStack(L,e);
-	}
-	//输出数据
-	cout << "链栈的长度为："<<GetLength(L) << endl;//输出链栈长度
-	PrintLinkStack(L);
-
-	//删除数据-删除栈顶元素
-	OutStack(L, e);
-	//输出链栈长度
-	cout << "链栈的长度为："<<GetLength(L) << endl;
-	PrintLinkStack(L);//输出测验
-
-	return 0;
-}
+////测试
+//int main() {
+//	//声明链栈
+//	LinkStack L;
+//	//声明待存入的数据
+//	int e;
+//
+//	//初始化
+//	InitLinkStack(L);
+//
+//	//输入数据
+//	cout << "请输入5个数据：";
+//	for (int i = 0;i < 5;i++) {
+//		cin >> e;
+//		PushStack(L,e);
+//	}
+//	//输出数据
+//	cout << "链栈的长度为："<<GetLength(L) << endl;//输出链栈长度
+//	PrintLinkStack(L);
+//
+//	//删除数据-删除栈顶元素
+//	OutStack(L, e);
+//	//输出链栈长度
+//	cout << "链栈的长度为："<<GetLength(L) << endl;
+//	PrintLinkStack(L);//输出测验
+//
+//	return 0;
+//}
