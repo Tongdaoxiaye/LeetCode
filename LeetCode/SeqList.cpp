@@ -89,35 +89,35 @@ void PrintSeqList(SeqList S) {
 }
 
 //测试类
-int main() {
-	//必要的声明
-	int x;
-	int e;
-	SeqList S;
-
-	//初始化
-	InitSeqList(S);
-
-	//插入数据
-	for (int i = 1;i <= 5;i++) {
-		cout << "请输入第"<<i<<"个数据：" << endl;
-		cin >> e;
-		InsertElem(S, i, e);
-	}
-
-	//删除数据
-	cout << "请输入想要删除的位置:"<< endl;
-	cin >> x;
-	DeleteElem(S, x, e);
-	cout << "被删除的数据为：" << e << endl;
-
-	//按值查找
-	cout << "请输入想要查询的值：" << endl;
-	cin >> x;
-	cout << "查找的元素在第" << GetElem(S, x) << "位" << endl;
-
-	//打印输出
-	PrintSeqList(S);
-
-	return 0;
-}
+//int main() {
+//	//必要的声明
+//	int x;
+//	int e;
+//	SeqList S;
+//
+//	//初始化
+//	InitSeqList(S);
+//
+//	//插入数据
+//	for (int i = 1;i <= 5;i++) {
+//		cout << "请输入第"<<i<<"个数据：" << endl;
+//		cin >> e;
+//		InsertElem(S, i, e);
+//	}
+//
+//	//删除数据
+//	cout << "请输入想要删除的位置:"<< endl;
+//	cin >> x;
+//	DeleteElem(S, x, e);
+//	cout << "被删除的数据为：" << e << endl;
+//
+//	//按值查找
+//	cout << "请输入想要查询的值：" << endl;
+//	cin >> x;
+//	cout << "查找的元素在第" << GetElem(S, x) << "位" << endl;
+//
+//	//打印输出
+//	PrintSeqList(S);
+//
+//	return 0;
+//}
